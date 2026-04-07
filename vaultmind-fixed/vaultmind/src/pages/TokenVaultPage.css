@@ -1,0 +1,49 @@
+.token-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.token-card { padding: 16px 20px; }
+
+.token-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.token-id-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.token-id { font-size: 13px; font-weight: 500; color: var(--text); }
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.token-field { display: flex; flex-direction: column; gap: 4px; }
+.token-label { font-size: 10px; color: var(--text3); font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+.token-scope { margin-bottom: 4px; }
+.scope-string {
+  font-size: 11px;
+  color: var(--text2);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+.vault-note { border-left: 3px solid var(--blue); border-radius: var(--radius-lg); }
+
+@media (max-width: 700px) {
+  .token-grid { grid-template-columns: 1fr 1fr; }
+}

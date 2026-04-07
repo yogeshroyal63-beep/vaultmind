@@ -1,0 +1,150 @@
+.feed-filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  font-family: var(--sans);
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover { background: var(--surface2); }
+.filter-btn.active { background: var(--text); color: var(--surface); border-color: var(--text); }
+
+.intent-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intent-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  transition: border-color 0.2s;
+}
+
+.intent-card.high-risk { border-left: 3px solid var(--red); }
+.intent-card.blocked { background: var(--red-bg); border-color: var(--red-border); opacity: 0.8; }
+.intent-card.approved { opacity: 0.85; }
+.intent-card.denied { opacity: 0.75; }
+
+.intent-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.intent-service-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--text2);
+}
+
+.intent-info { flex: 1; min-width: 0; }
+
+.intent-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.intent-action { font-size: 13px; font-weight: 500; color: var(--text); }
+.intent-arrow { color: var(--text3); font-size: 12px; }
+.intent-service { font-size: 12px; color: var(--text2); }
+
+.intent-detail {
+  font-size: 13px;
+  color: var(--text2);
+  margin-bottom: 6px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.intent-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.intent-agent {
+  font-size: 11px;
+  color: var(--blue);
+  background: var(--blue-bg);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.intent-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--text3);
+}
+
+.intent-right { flex-shrink: 0; }
+
+.intent-actions { display: flex; gap: 6px; }
+
+.intent-status-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+  color: var(--text3);
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  background: var(--surface2);
+}
+.intent-status-badge.approved { color: var(--green); background: var(--green-bg); }
+.intent-status-badge.blocked, .intent-status-badge.denied { color: var(--red); background: var(--red-bg); }
+
+.feed-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 60px;
+  color: var(--text3);
+  font-size: 13px;
+}
+
+.receipt-drawer {
+  margin-top: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+
+@media (max-width: 600px) {
+  .intent-card { flex-direction: column; align-items: flex-start; }
+  .intent-right { width: 100%; margin-top: 10px; }
+  .intent-actions { flex-wrap: wrap; }
+}
